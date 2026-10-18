@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,6 +195,22 @@
       border-radius: 6px;
       padding: 9px 13px;
       font-weight: 700;
+    }
+
+    /* New WhatsApp button in header */
+
+    .nav-links .nav-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+      border-radius: 6px;
+      padding: 9px 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav-links .nav-whatsapp:hover {
+      background: #1fb957;
+      color: #ffffff;
     }
 
     .menu-toggle {
@@ -701,10 +717,12 @@
         font-size: 14px;
       }
 
-      .nav-links .nav-cta {
+      .nav-links .nav-cta,
+      .nav-links .nav-whatsapp {
         text-align: center;
         margin-top: 10px;
         border: 0;
+        padding: 11px 13px;
       }
 
       .actions {
@@ -777,8 +795,15 @@
       <a href="#services">Services</a>
       <a href="#results">Case Studies</a>
       <a href="#process">My Process</a>
-      <a class="nav-cta" href="https://calendly.com/muheuddin4077/30min"
-        target="_blank" rel="noopener noreferrer">Get a Free Audit ↗</a>
+
+      <!-- Get in Touch button: scrolls to the Contact section -->
+      <a class="nav-cta" href="#contact">Get in Touch</a>
+
+      <!-- WhatsApp button -->
+      <a class="nav-whatsapp"
+        href="https://wa.me/8801648314077"
+        target="_blank"
+        rel="noopener noreferrer">WhatsApp ↗</a>
     </nav>
   </div>
 </header>
@@ -1213,3 +1238,4 @@
 </script>
 </body>
 </html>
+```
