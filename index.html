@@ -1,223 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Google Ads lead generation and conversion tracking for roofing, plumbing, HVAC and cleaning businesses. Google Ads, GTM, GA4 and Enhanced Conversions.">
-  <meta name="theme-color" content="#0b1120">
-  <meta property="og:title" content="Muheuddin | Google Ads Lead Generation & Tracking">
-  <meta property="og:description" content="Google Ads lead generation, conversion tracking, GTM and GA4 for local service businesses.">
-  <meta property="og:type" content="website">
-  <title>Muheuddin | Google Ads Lead Generation & Tracking</title>
-  <style>
-    :root{--bg:#0b1120;--panel:#111a2b;--panel2:#152238;--text:#f4f7fb;--muted:#aab6c8;--green:#6ee7a0;--green2:#b2f5c9;--line:rgba(255,255,255,.11);--gold:#e9c878;--max:1140px}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
-    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
-    .topbar{border-bottom:1px solid var(--line);background:rgba(11,17,32,.9);font-size:13px;color:var(--muted)}
-    .topbar .container{display:flex;justify-content:space-between;gap:12px;padding:9px 0;align-items:center}
-    .topbar-links{display:flex;gap:15px;align-items:center;flex-wrap:wrap}.topbar-links a:hover{color:var(--green)}
-    .available{display:flex;gap:8px;align-items:center}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px rgba(110,231,160,.55)}
-    header{position:sticky;top:0;z-index:10;background:rgba(11,17,32,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-    nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em;font-size:19px;white-space:nowrap}.brand-copy{display:flex;flex-direction:column;line-height:1.15}.brand-copy small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:5px;font-weight:700}.brand-logo{width:46px;height:46px;flex:0 0 46px;display:block}
-    .navlinks{display:flex;align-items:center;gap:22px;color:#d5deeb;font-size:14px}
-    .nav-actions{display:flex;align-items:center;gap:9px;flex-shrink:0}.nav-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 13px;border-radius:9px;border:1px solid rgba(110,231,160,.4);color:var(--green);font-size:13px;font-weight:800;white-space:nowrap}.nav-whatsapp:hover{background:rgba(110,231,160,.1)}.nav-whatsapp svg{width:17px;height:17px;fill:currentColor}
-    .navlinks a:hover{color:var(--green)}
-    .nav-cta,.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:12px 17px;border-radius:9px;font-size:14px;font-weight:750;transition:.2s;border:1px solid transparent}
-    .nav-cta,.btn-primary{background:var(--green);color:#092016}.nav-cta:hover,.btn-primary:hover{background:var(--green2);transform:translateY(-1px)}
-    .btn-outline{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.025)}.btn-outline:hover{border-color:var(--green);color:var(--green)}
-    .menu-btn{display:none;background:none;color:var(--text);border:1px solid var(--line);padding:8px 11px;border-radius:8px}
-    .hero{padding:88px 0 72px;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;width:500px;height:500px;right:-180px;top:-130px;background:radial-gradient(circle,rgba(110,231,160,.12),transparent 68%);pointer-events:none}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:58px;align-items:center;position:relative}
-    .eyebrow{color:var(--green);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.16em;display:flex;gap:10px;align-items:center;margin-bottom:20px}
-    .eyebrow:before{content:"";width:25px;height:1px;background:var(--green)}
-    h1{font-size:clamp(39px,5vw,65px);line-height:1.06;letter-spacing:-.055em;max-width:720px;margin-bottom:23px}
-    h1 span{color:var(--green)}
-    .hero-copy{font-size:17px;color:var(--muted);max-width:620px;margin-bottom:28px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:27px}
-    .proof-line{display:flex;flex-wrap:wrap;gap:10px 18px;color:#c6d1df;font-size:13px}.proof-line span:before{content:"✓";color:var(--green);margin-right:7px;font-weight:900}
-    .dashboard{background:linear-gradient(150deg,#17243a,#101a2b 70%);border:1px solid rgba(110,231,160,.2);border-radius:20px;padding:22px;box-shadow:0 25px 80px rgba(0,0,0,.25);position:relative}
-    .dash-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}
-    .dash-label{font-size:13px;color:var(--muted)}.dash-title{font-weight:800;font-size:17px}.pill{font-size:11px;padding:5px 9px;border:1px solid rgba(110,231,160,.25);color:var(--green);border-radius:99px}
-    .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:17px 0}
-    .metric{padding:17px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:12px}
-    .metric small{display:block;color:var(--muted);font-size:12px;margin-bottom:8px}.metric strong{font-size:25px;letter-spacing:-.04em}.metric .change{display:block;color:var(--green);font-size:11px;margin-top:4px}
-    .mini-chart{padding:14px 14px 8px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:12px}
-    .chart-head{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:10px}.bars{height:80px;display:flex;align-items:end;gap:8px}.bars i{display:block;flex:1;background:linear-gradient(180deg,var(--green),rgba(110,231,160,.22));border-radius:5px 5px 0 0}
-    .dash-note{font-size:11px;color:#8493a9;margin-top:12px}
-    .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}
-    .trust-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px 34px;text-align:center}.trust-title{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}.tech{font-size:14px;font-weight:750;color:#d7e1ef}.tech b{color:var(--green);margin-right:7px}
-    section{padding:82px 0}.section-head{max-width:700px;margin-bottom:34px}.section-kicker{color:var(--green);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:11px}.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-.04em;margin-bottom:15px}.section-head p{color:var(--muted)}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .service-card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:25px;transition:.2s}.service-card:hover{transform:translateY(-4px);border-color:rgba(110,231,160,.42)}
-    .iconbox{width:43px;height:43px;border-radius:11px;display:grid;place-items:center;background:rgba(110,231,160,.1);border:1px solid rgba(110,231,160,.18);color:var(--green);font-weight:900;font-size:19px;margin-bottom:19px}
-    .service-card h3{font-size:18px;margin-bottom:9px;letter-spacing:-.02em}.service-card p{font-size:14px;color:var(--muted);margin-bottom:17px}.text-link{color:var(--green);font-size:13px;font-weight:750}
-    .case-section{background:linear-gradient(180deg,rgba(255,255,255,.018),transparent)}
-    .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .case-card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:27px}
-    .case-tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-weight:800}
-    .case-card h3{font-size:23px;letter-spacing:-.03em;margin:8px 0}.case-card>p{color:var(--muted);font-size:14px;margin-bottom:22px}
-    .case-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:13px 10px;background:rgba(255,255,255,.035);border-radius:10px;border:1px solid var(--line)}.stat small{display:block;color:var(--muted);font-size:11px;line-height:1.4}.stat strong{display:block;font-size:21px;color:var(--green);margin-top:7px;letter-spacing:-.04em}
-    .case-foot{font-size:11px;color:#8291a7;margin-top:15px}.case-details{margin-top:18px;border-top:1px solid var(--line);padding-top:13px}.case-details summary{cursor:pointer;color:var(--green);font-size:13px;font-weight:750;list-style:none}.case-details summary::-webkit-details-marker{display:none}.case-details summary:after{content:" +"}.case-details[open] summary:after{content:" −"}.case-details p{font-size:13px;color:var(--muted);margin-top:10px}.about-band{background:linear-gradient(180deg,rgba(110,231,160,.035),transparent)}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}.about-card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:27px}.about-card p{font-size:14px;color:var(--muted);margin-bottom:14px}.about-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.about-point{padding:13px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025);font-size:13px;color:#d7e0ed}.about-point b{display:block;color:var(--green);margin-bottom:4px}
-    .bio-profile{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--line)}.bio-avatar{width:84px;height:84px;flex:0 0 84px;border-radius:50%;overflow:hidden;border:2px solid rgba(110,231,160,.55);background:#142b2a;display:grid;place-items:center}.bio-avatar svg{width:100%;height:100%;display:block}.bio-name{font-size:21px;font-weight:850;letter-spacing:-.03em}.bio-role{font-size:12px;color:var(--green);font-weight:750;margin-top:3px}.bio-note{font-size:12px;color:var(--muted);margin-top:5px}
-    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:21px 19px;border-top:1px solid rgba(110,231,160,.45);background:linear-gradient(180deg,rgba(110,231,160,.055),transparent);border-radius:0 0 12px 12px}.step-no{font-size:12px;color:var(--green);font-weight:850;letter-spacing:.1em}.step h3{margin:10px 0 7px;font-size:17px}.step p{font-size:13px;color:var(--muted)}
-    .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:start}.why-panel{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:27px}.why-panel h3{font-size:21px;margin-bottom:14px}.why-panel p{font-size:14px;color:var(--muted)}.check-list{list-style:none;display:grid;gap:15px}.check-list li{display:flex;gap:12px;color:#d7e0ed;font-size:14px}.check-list li:before{content:"✓";flex:0 0 23px;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;color:var(--green);background:rgba(110,231,160,.1);font-weight:900}
-    .faq-list{max-width:850px;display:grid;gap:10px}.faq-item{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:0 19px}.faq-item summary{cursor:pointer;list-style:none;padding:18px 25px 18px 0;font-weight:750;position:relative}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary:after{content:"+";position:absolute;right:0;color:var(--green);font-size:21px;top:12px}.faq-item[open] summary:after{content:"−"}.faq-item p{font-size:14px;color:var(--muted);padding:0 0 18px}
-    .cta-band{padding:0 0 82px}.cta-box{background:linear-gradient(120deg,#142b2a,#132039 75%);border:1px solid rgba(110,231,160,.22);border-radius:20px;padding:43px;display:flex;justify-content:space-between;align-items:center;gap:28px}.cta-box h2{font-size:clamp(28px,4vw,40px);line-height:1.13;letter-spacing:-.04em;margin-bottom:12px}.cta-box p{color:var(--muted);max-width:600px;font-size:14px}.cta-actions{display:flex;flex-wrap:wrap;gap:10px;flex-shrink:0}
-    footer{border-top:1px solid var(--line);padding:27px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-links a:hover{color:var(--green)}
-    .fineprint{font-size:11px;color:#7f8da2;margin-top:14px;max-width:850px}
-    @media(max-width:1100px){nav{gap:13px}.navlinks{gap:14px;font-size:13px}.nav-whatsapp{padding:10px}.nav-whatsapp .wa-label{display:none}}
-    @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:35px}.dashboard{max-width:600px}.services-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr;gap:25px}.about-grid{grid-template-columns:1fr}.cta-box{align-items:flex-start;flex-direction:column}}
-    @media(max-width:680px){.container{width:min(100% - 30px,var(--max))}.topbar .container{font-size:11px}.topbar .hide-small{display:none}.topbar-links{gap:10px}.topbar-links a{font-size:10px}nav{min-height:66px}.brand-logo{width:40px;height:40px;flex-basis:40px}.brand{font-size:17px;gap:8px}.brand-copy small{font-size:8px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#0e1728;padding:20px 22px 25px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:18px}.navlinks.open{display:flex}.nav-cta{display:none}.nav-actions{gap:7px}.nav-whatsapp{padding:9px}.nav-whatsapp .wa-label{display:none}.hero{padding:60px 0 50px}h1{font-size:42px}.hero-copy{font-size:15px}.dashboard{padding:16px}.metric strong{font-size:22px}section{padding:62px 0}.services-grid,.case-grid{grid-template-columns:1fr}.about-points{grid-template-columns:1fr 1fr}.case-card{padding:21px}.case-stats{gap:7px}.stat{padding:11px 8px}.stat strong{font-size:18px}.process-grid{gap:10px}.step{padding:17px 13px}.cta-box{padding:27px 22px}.cta-actions{width:100%}.cta-actions .btn{width:100%}.actions .btn{flex:1}.trust-inner{gap:13px 20px}.bio-avatar{width:70px;height:70px;flex-basis:70px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muheuddin | Google Ads Lead Generation & Tracking for Local Service Businesses</title>
+<meta name="description" content="Google Ads lead generation and conversion tracking for roofing, plumbing, HVAC and cleaning businesses. Google Ads, GTM, GA4 and Enhanced Conversions.">
+<meta property="og:title" content="Muheuddin | Google Ads Lead Generation & Tracking">
+<meta property="og:description" content="More calls and form leads for local service businesses, with tracking you can trust.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f3d2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10231b;--green:#0f3d2e;--lime:#2be08a;--paper:#f5f7f2;--card:#fff;--line:#dfe6dc;--muted:#55665d}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);max-width:20ch;margin-bottom:14px}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:40px}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;background:var(--lime);color:var(--green);border:2px solid var(--lime);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border-color:#ffffff55}
+.btn.dark{background:var(--green);color:#fff;border-color:var(--green)}
+ 
+/* header */
+header{position:sticky;top:0;z-index:20;background:#f5f7f2ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.25rem;text-decoration:none}
+.logo span{color:#12a566}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:500;font-size:.96rem}
+nav a:hover{color:#12a566}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 14px;font:inherit;cursor:pointer}
+.nav .btn{padding:9px 18px;font-size:.92rem}
+ 
+/* hero */
+.hero{background:var(--green);color:#fff;padding:72px 0 0;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end}
+.avail{display:inline-flex;align-items:center;gap:9px;background:#ffffff14;border-radius:999px;padding:6px 15px;font-size:.9rem;margin-bottom:22px}
+.avail i{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px #2be08a33}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:800;margin-bottom:20px}
+.hero p{color:#cfe3d9;max-width:52ch;margin-bottom:28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.ticks{display:flex;gap:10px 26px;flex-wrap:wrap;padding:0;list-style:none;margin-bottom:56px;font-weight:500;font-size:.95rem}
+.ticks li::before{content:"✓";color:var(--lime);margin-right:8px;font-weight:700}
+.photo{position:relative;align-self:end}
+.photo img{width:100%;max-width:420px;margin-left:auto;border-radius:24px 24px 0 0;aspect-ratio:4/5;object-fit:cover;object-position:top;background:#1b5a44}
+ 
+/* tools strip */
+.tools{padding:34px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.tools b{margin-right:10px;color:var(--muted);font-weight:500}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-weight:600;font-size:.92rem}
+ 
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.card h3{font-size:1.25rem;margin:14px 0 8px}
+.card p{color:var(--muted);font-size:.97rem;margin-bottom:16px}
+.card a{font-weight:600;color:#0c8a55;text-decoration:none}
+.ic{width:46px;height:46px;border-radius:12px;background:var(--green);color:var(--lime);display:grid;place-items:center;font-size:1.3rem}
+ 
+/* spotlight tabs */
+.spot{background:var(--card);border-block:1px solid var(--line)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.tab{font:inherit;font-weight:600;padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:var(--paper);cursor:pointer}
+.tab[aria-selected=true]{background:var(--green);color:#fff;border-color:var(--green)}
+.panel{display:none;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.panel.on{display:grid;animation:fade .3s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.panel h3{font-size:1.9rem;margin-bottom:12px}
+.panel p{color:var(--muted);margin-bottom:20px}
+.panel ul{list-style:none;padding:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px}
+.panel li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line)}
+.panel li:last-child{border:0}
+.panel li::before{content:"✓";position:absolute;left:0;color:#12a566;font-weight:700}
+ 
+/* case studies */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case{background:var(--green);color:#fff;border-radius:20px;padding:28px;display:flex;flex-direction:column}
+.case small{color:#9cc9b6}
+.case h3{font-size:1.3rem;margin:8px 0 20px}
+.m{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #ffffff22;padding:11px 0;font-size:.95rem}
+.m b{font-family:'Bricolage Grotesque';font-size:1.25rem;color:var(--lime)}
+.case p{font-size:.8rem;color:#9cc9b6;margin-top:auto;padding-top:16px}
+ 
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{border-top:3px solid var(--green);padding-top:18px;counter-increment:s}
+.step::before{content:"Step " counter(s);font-weight:600;color:#12a566;font-size:.9rem}
+.step h3{font-size:1.3rem;margin:6px 0 8px}
+.step p{color:var(--muted);font-size:.96rem}
+ 
+/* faq */
+.faq{max-width:780px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:#12a566}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:12px}
+ 
+/* final cta + footer */
+.final{background:var(--green);color:#fff;text-align:center}
+.final h2{margin-inline:auto;max-width:18ch}
+.final p{color:#cfe3d9;margin:0 auto 28px;max-width:52ch}
+.final .cta{justify-content:center;margin:0}
+footer{background:#0a2a1f;color:#a9c4b7;padding:44px 0;font-size:.93rem}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{margin-right:18px;text-decoration:none;color:#fff}
+footer small{display:block;width:100%;font-size:.8rem;border-top:1px solid #ffffff1c;padding-top:20px;color:#7fa391}
+ 
+@media(max-width:900px){
+ .hero .grid,.panel.on{grid-template-columns:1fr}
+ .cards,.cases{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .photo img{margin:0 auto}
+ .hero{padding-top:48px}.ticks{margin-bottom:36px}
+}
+@media(max-width:680px){
+ section{padding:60px 0}
+ .menu{display:block}
+ nav{position:absolute;top:68px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);display:none}
+ nav.open{display:block}
+ nav ul{flex-direction:column;gap:0;padding:8px 22px}
+ nav li a{display:block;padding:12px 0}
+ .nav>.btn{display:none}
+ .cards,.cases,.steps{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-  <div class="topbar"><div class="container"><div class="available"><span class="dot"></span><span>Available for Google Ads & tracking projects</span></div><div class="topbar-links"><a href="mailto:muheuddin4077@gmail.com">Email</a><a href="https://www.linkedin.com/in/ppcmuheuddin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.upwork.com/freelancers/~0148181084e34f623f" target="_blank" rel="noopener noreferrer">Upwork ↗</a></div></div></div>
-  <header>
-    <nav class="container">
-      <a class="brand" href="#home" aria-label="PPC Muheuddin home"><svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="PPC Muheuddin logo"><defs><linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6ee7a0" stop-opacity=".28"/><stop offset="1" stop-color="#6ee7a0" stop-opacity=".04"/></linearGradient></defs><rect x="1" y="1" width="62" height="62" rx="17" fill="url(#logoGradient)" stroke="#6ee7a0" stroke-opacity=".65"/><path d="M13 43V21h12c7 0 11 4 11 10s-4 10-11 10h-5v2zm7-8h5c3 0 4-1 4-4s-1-4-4-4h-5z" fill="#6ee7a0"/><path d="M38 43V21h12c7 0 11 4 11 10s-4 10-11 10h-5v2zm7-8h5c3 0 4-1 4-4s-1-4-4-4h-5z" fill="#f4f7fb" transform="translate(-3 0) scale(.88 1)"/></svg><span class="brand-copy">Muheuddin <small>Google Ads & Tracking</small></span></a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">Menu ☰</button>
-      <div class="navlinks" id="navlinks">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#case-studies">Case Studies</a><a href="#process">My Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
-      </div>
-      <div class="nav-actions"><a class="nav-whatsapp" href="https://wa.me/8801648314077" target="_blank" rel="noopener noreferrer" aria-label="Chat with Muheuddin on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 1 1 8.6 4.8Zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.6-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5.1c.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.2-1.4-.2-.2-.5-.4Z"/></svg><span class="wa-label">WhatsApp</span></a><a class="nav-cta" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener noreferrer">Get a Free Audit ↗</a></div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Google Ads • Lead Generation • Tracking</div>
-          <h1>Turn Google Ads Clicks Into <span>Qualified Local Leads.</span></h1>
-          <p class="hero-copy">I help roofing, plumbing, HVAC and cleaning businesses improve Google Ads performance with better campaign optimization and reliable conversion tracking.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Get a Free Ads Audit ↗</a>
-            <a class="btn btn-outline" href="#case-studies">View Case Studies ↓</a>
-          </div>
-          <div class="proof-line"><span>Google Ads lead generation</span><span>GTM & GA4 tracking</span><span>Enhanced Conversions</span></div>
-        </div>
-        <div class="dashboard" aria-label="Example campaign performance dashboard">
-          <div class="dash-top"><div><div class="dash-label">Campaign performance</div><div class="dash-title">Lead generation overview</div></div><span class="pill">Tracking-first approach</span></div>
-          <div class="metric-grid">
-            <div class="metric"><small>Conversions</small><strong>142</strong><span class="change">Example case study result</span></div>
-            <div class="metric"><small>Cost per conversion</small><strong>$5.32</strong><span class="change">Example case study result</span></div>
-            <div class="metric"><small>Phone calls</small><strong>265</strong><span class="change">Example case study result</span></div>
-            <div class="metric"><small>Tracking setup</small><strong>GTM + GA4</strong><span class="change">Test before decisions</span></div>
-          </div>
-          <div class="mini-chart"><div class="chart-head"><span>Illustrative lead trend</span><span>Campaign review</span></div><div class="bars"><i style="height:28%"></i><i style="height:38%"></i><i style="height:32%"></i><i style="height:51%"></i><i style="height:45%"></i><i style="height:67%"></i><i style="height:80%"></i><i style="height:72%"></i><i style="height:92%"></i><i style="height:85%"></i></div></div>
-          <p class="dash-note">Illustrative dashboard design. Results vary by account, market, budget and reporting period.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="trust"><div class="container trust-inner"><span class="trust-title">Tools & platforms</span><span class="tech"><b>✓</b>Google Ads</span><span class="tech"><b>✓</b>Google Tag Manager</span><span class="tech"><b>✓</b>Google Analytics 4</span><span class="tech"><b>✓</b>Enhanced Conversions</span><span class="tech"><b>✓</b>Looker Studio</span></div></div>
-
-    <section id="services">
-      <div class="container">
-        <div class="section-head"><div class="section-kicker">What I can help with</div><h2>Google Ads and tracking built around real leads.</h2><p>Clear setup, practical optimization and reliable measurement for local service businesses—not just more clicks.</p></div>
-        <div class="services-grid">
-          <article class="service-card"><div class="iconbox">↗</div><h3>Google Ads Lead Generation</h3><p>Campaign setup and management focused on high-intent searches, relevant locations and calls or form leads.</p><a class="text-link" href="#contact">Discuss your campaigns →</a></article>
-          <article class="service-card"><div class="iconbox">◎</div><h3>Conversion Tracking</h3><p>Track calls, forms and important website actions so campaign decisions are based on useful data.</p><a class="text-link" href="#contact">Fix tracking issues →</a></article>
-          <article class="service-card"><div class="iconbox">⌘</div><h3>GTM & GA4 Setup</h3><p>Configure tags, triggers and events, then test them using GTM Preview and GA4 DebugView.</p><a class="text-link" href="#contact">Set up measurement →</a></article>
-          <article class="service-card"><div class="iconbox">↻</div><h3>Campaign Optimization</h3><p>Review search terms, negative keywords, targeting, ad relevance and landing-page conversion issues.</p><a class="text-link" href="#contact">Review performance →</a></article>
-          <article class="service-card"><div class="iconbox">✓</div><h3>Enhanced Conversions</h3><p>Check eligibility and configure Enhanced Conversions where appropriate to improve conversion data quality.</p><a class="text-link" href="#contact">Improve measurement →</a></article>
-          <article class="service-card"><div class="iconbox">▤</div><h3>Calls, Forms & Reporting</h3><p>Measure key lead actions and organize reporting so you can understand what is driving inquiries.</p><a class="text-link" href="#contact">Track your leads →</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="case-section" id="case-studies">
-      <div class="container">
-        <div class="section-head"><div class="section-kicker">Selected results</div><h2>Case studies from Google Ads campaigns.</h2><p>Examples of campaign performance after tracking and optimization work. Always compare the reporting periods and campaign context before drawing conclusions.</p></div>
-        <div class="case-grid">
-          <article class="case-card">
-            <span class="case-tag">Dental clinic • Google Ads</span>
-            <h3>More dental leads with improved cost efficiency</h3>
-            <p>The campaign was reviewed around conversion performance, patient-intent searches and ongoing optimization. Search terms and conversion data were used to guide decisions.</p>
-            <div class="case-stats"><div class="stat"><small>Conversions</small><strong>54.01 → 251</strong></div><div class="stat"><small>Phone calls</small><strong>82 → 175</strong></div><div class="stat"><small>Cost / conversion</small><strong>$15.18 → $13.71</strong></div></div>
-            <p class="case-foot"><strong>Reporting periods:</strong> Apr 16–May 15, 2026 vs. Jul 1–31, 2026. Ad spend increased from $820 to $3,440. Different periods and spend levels mean this is not a like-for-like test.</p><details class="case-details"><summary>Challenge & approach</summary><p><strong>Goal:</strong> increase recorded lead volume while improving cost efficiency. The review focused on conversion performance, patient-intent searches, search terms and ongoing campaign optimization. The supplied screenshots show results, but do not document every change made.</p></details>
-          </article>
-          <article class="case-card">
-            <span class="case-tag">Cleaning service • Lead generation</span>
-            <h3>More cleaning leads and calls at a lower cost</h3>
-            <p>Reviewed campaign performance, conversion data, keywords, targeting and setup. Optimization focused on meaningful lead actions such as phone calls and form submissions rather than clicks alone.</p>
-            <div class="case-stats"><div class="stat"><small>Conversions</small><strong>54.01 → 167</strong></div><div class="stat"><small>Phone calls</small><strong>82 → 369</strong></div><div class="stat"><small>Cost / conversion</small><strong>$15.18 → $5.93</strong></div></div>
-            <p class="case-foot"><strong>Reporting periods:</strong> Apr 16–May 15, 2026 vs. Aug 1–31, 2026. Ad spend increased from $820 to $990. Figures reflect the supplied account screenshots; attribution can include fractional conversions.</p><details class="case-details"><summary>Challenge & approach</summary><p><strong>Challenge:</strong> the business was spending on ads but wanted more meaningful inquiries. The review covered conversion data, campaign performance, keywords, targeting and setup, with attention to calls and form submissions rather than clicks alone.</p></details>
-          </article>
-          <article class="case-card">
-            <span class="case-tag">Roofing • Google Ads lead generation</span>
-            <h3>More roofing calls with a lower cost per conversion</h3>
-            <p>Reviewed campaign setup and conversion measurement, then focused on lead actions, high-intent searches and reducing irrelevant traffic.</p>
-            <div class="case-stats"><div class="stat"><small>Conversions</small><strong>49 → 142</strong></div><div class="stat"><small>Phone calls</small><strong>90 → 265</strong></div><div class="stat"><small>Cost / conversion</small><strong>$16.32 → $5.32</strong></div></div>
-            <p class="case-foot">The supplied roofing draft lists spend changing from $800 to $890. Confirm the original reporting dates and account screenshots before treating the comparison as like-for-like.</p><details class="case-details"><summary>Challenge & approach</summary><p>The work focused on reviewing campaign setup and conversion measurement, emphasizing high-intent roofing searches and reducing irrelevant traffic. Verify the original report dates and client permission before publishing these figures.</p></details>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-band" id="about">
-      <div class="container about-grid">
-        <div class="section-head"><div class="section-kicker">About me</div><h2>Practical Google Ads support, built around real leads.</h2><p>I help local businesses understand what their ads are doing, fix measurement gaps and make focused improvements based on data.</p><div style="margin-top:22px"><a class="btn btn-primary" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Talk about your account ↗</a></div></div>
-        <div class="about-card"><div class="bio-profile"><div class="bio-avatar" role="img" aria-label="Muheuddin brand avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="avatarGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b3a35"/><stop offset="1" stop-color="#111a2b"/></linearGradient></defs><circle cx="50" cy="50" r="50" fill="url(#avatarGradient)"/><circle cx="50" cy="36" r="17" fill="#6ee7a0" fill-opacity=".95"/><path d="M19 91c3-20 15-31 31-31s28 11 31 31" fill="#6ee7a0" fill-opacity=".95"/><path d="M34 32c1-13 8-20 18-20 10 0 17 7 17 18-5-4-10-7-17-7-7 0-12 4-18 9" fill="#f4f7fb" fill-opacity=".9"/></svg></div><div><div class="bio-name">Muheuddin</div><div class="bio-role">Google Ads Specialist</div><div class="bio-note">Lead Generation • GTM • GA4 • Conversion Tracking</div></div></div><p>My work combines Google Ads campaign management with conversion tracking, because clicks alone do not tell the full story. Before making big changes, I check whether calls and forms are being measured properly and where the lead journey may be breaking.</p><p>I focus on local service businesses including roofing, plumbing, HVAC and cleaning. I also support dental and other service campaigns when the project is a good fit.</p><div class="about-points"><div class="about-point"><b>Measure first</b>Check conversion tracking before making decisions.</div><div class="about-point"><b>Focus on intent</b>Prioritize relevant searches and service areas.</div><div class="about-point"><b>Change with purpose</b>Test one meaningful improvement at a time.</div><div class="about-point"><b>Report clearly</b>Explain what changed and what to review next.</div></div></div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="container">
-        <div class="section-head"><div class="section-kicker">My process</div><h2>Find the problem before changing the campaign.</h2><p>I avoid changing everything at once. I check the data, identify the likely issue, make focused improvements and measure what changes.</p></div>
-        <div class="process-grid">
-          <div class="step"><span class="step-no">STEP 01</span><h3>Audit</h3><p>Review campaign settings, search terms, conversion actions and current tracking.</p></div>
-          <div class="step"><span class="step-no">STEP 02</span><h3>Find the issue</h3><p>Identify wasted spend, weak intent, tracking gaps or landing-page friction.</p></div>
-          <div class="step"><span class="step-no">STEP 03</span><h3>Fix & optimize</h3><p>Prioritize changes based on evidence and your lead-generation goals.</p></div>
-          <div class="step"><span class="step-no">STEP 04</span><h3>Test & report</h3><p>Validate tracking, measure results and explain what to improve next.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container why-grid">
-        <div class="section-head"><div class="section-kicker">Why tracking matters</div><h2>Bad data makes good decisions harder.</h2><p>Before increasing budgets or making major campaign changes, make sure your important lead actions are being measured correctly.</p><div style="margin-top:22px"><a class="btn btn-primary" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Request a Free Audit ↗</a></div></div>
-        <div class="why-panel"><h3>What I check during an audit</h3><ul class="check-list"><li>Are phone calls and form submissions tracked correctly?</li><li>Are conversion actions firing once and recording the right events?</li><li>Are search terms relevant to the services you actually offer?</li><li>Are location targeting and campaign settings aligned with your service area?</li><li>Does the landing page make it easy for a potential customer to contact you?</li><li>Can we connect campaign spend with the leads your business receives?</li></ul></div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-head"><div class="section-kicker">FAQ</div><h2>Questions before we get started.</h2><p>Not sure what your account needs? Start with a short conversation about your goals and current setup.</p></div>
-        <div class="faq-list">
-          <details class="faq-item"><summary>Which businesses do you work with?</summary><p>My main focus is local service businesses such as roofing, plumbing, HVAC and cleaning companies that want more relevant calls and form leads.</p></details>
-          <details class="faq-item"><summary>Can you audit an existing Google Ads account?</summary><p>Yes. I can review campaign structure, keywords and search terms, targeting, ads, conversion actions and landing-page experience, then outline the highest-priority issues I find.</p></details>
-          <details class="faq-item"><summary>Can you set up GTM, GA4 and Google Ads conversion tracking?</summary><p>Yes. The exact setup depends on your website and lead journey. I can configure the agreed events and test them using available preview and debugging tools.</p></details>
-          <details class="faq-item"><summary>Do you guarantee a specific number of leads?</summary><p>No. Lead volume and cost depend on competition, budget, service area, website experience and other factors. I focus on sound setup, measurable improvements and transparent reporting.</p></details>
-          <details class="faq-item"><summary>What do you need to start?</summary><p>Usually, a short description of your business, service areas and goals is enough for an initial discussion. If an audit requires account access, we can agree on the minimum access needed.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band" id="contact"><div class="container"><div class="cta-box"><div><div class="section-kicker">Let's talk about your campaigns</div><h2>Find out what may be holding your leads back.</h2><p>Tell me about your business and your Google Ads goals. We can start with a free audit discussion and decide on the next practical step.</p></div><div class="cta-actions"><a class="btn btn-primary" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Get a Free Audit ↗</a><a class="btn btn-outline" href="https://wa.me/8801648314077" target="_blank" rel="noopener">WhatsApp ↗</a></div></div></div></section>
-  </main>
-
-  <footer><div class="container footer-inner"><div>© <span id="year"></span> PPC Muheuddin. Google Ads Lead Generation & Tracking.</div><div class="footer-links"><a href="mailto:muheuddin4077@gmail.com">Email</a><a href="https://www.linkedin.com/in/ppcmuheuddin" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.upwork.com/freelancers/~0148181084e34f623f" target="_blank" rel="noopener noreferrer">Upwork</a><a href="https://wa.me/8801648314077" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="container fineprint">Performance figures are based on supplied case-study drafts and account screenshots. Reporting periods and spend differ, so results are not necessarily like-for-like. Confirm original account data and client permission before publication. No specific lead volume or advertising result is guaranteed.</div></footer>
-
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const navlinks = document.getElementById('navlinks');
-    menuBtn.addEventListener('click', () => {
-      const open = navlinks.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', String(open));
-      menuBtn.textContent = open ? 'Close ✕' : 'Menu ☰';
-    });
-    navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      navlinks.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.textContent = 'Menu ☰';
-    }));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+ 
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#home">PPC<span>Muheuddin</span></a>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#case-studies">Case studies</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+  </nav>
+  <a class="btn dark" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Free audit ↗</a>
+  <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu ☰</button>
+ </div>
+</header>
+ 
+<main id="home">
+<section class="hero">
+ <div class="wrap grid">
+  <div>
+   <div class="avail"><i></i>Available for new projects</div>
+   <h1>Google Ads that turn local clicks into booked jobs.</h1>
+   <p>I'm Muheuddin, a Google Ads and conversion tracking specialist for roofing, plumbing, HVAC and cleaning businesses. I set up campaigns around real calls and form leads, and I make sure every lead is measured.</p>
+   <div class="cta">
+    <a class="btn" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Get your free ads audit</a>
+    <a class="btn ghost" href="#case-studies">See case studies</a>
+   </div>
+   <ul class="ticks">
+    <li>Tracking-first setup</li>
+    <li>Calls and forms, not just clicks</li>
+    <li>Clear, honest reporting</li>
+   </ul>
+  </div>
+  <div class="photo">
+   <img src="muheuddin.jpg" alt="Muheuddin, Google Ads and conversion tracking specialist" width="420" height="525">
+  </div>
+ </div>
+</section>
+ 
+<div class="tools">
+ <div class="wrap">
+  <b>Tools I work with:</b>
+  <span class="chip">Google Ads</span><span class="chip">Google Tag Manager</span><span class="chip">Google Analytics 4</span><span class="chip">Enhanced Conversions</span><span class="chip">Call tracking</span><span class="chip">Looker Studio</span>
+ </div>
+</div>
+ 
+<section id="services">
+ <div class="wrap">
+  <h2>Google Ads and tracking built around real leads</h2>
+  <p class="lead">Clear setup, practical optimization and reliable measurement for local service businesses.</p>
+  <div class="cards">
+   <div class="card"><div class="ic">↗</div><h3>Google Ads lead generation</h3><p>Search campaigns focused on high-intent searches, your service areas, and calls or form leads.</p><a href="#contact">Discuss your campaigns</a></div>
+   <div class="card"><div class="ic">◎</div><h3>Conversion tracking</h3><p>Track calls, forms and key website actions so every budget decision rests on useful data.</p><a href="#contact">Fix your tracking</a></div>
+   <div class="card"><div class="ic">⌘</div><h3>GTM and GA4 setup</h3><p>Tags, triggers and events configured, then tested in GTM Preview and GA4 DebugView.</p><a href="#contact">Set up measurement</a></div>
+   <div class="card"><div class="ic">↻</div><h3>Campaign optimization</h3><p>Search terms, negative keywords, targeting, ad relevance and landing-page issues, reviewed regularly.</p><a href="#contact">Review performance</a></div>
+   <div class="card"><div class="ic">✓</div><h3>Enhanced Conversions</h3><p>Eligibility checks and setup where appropriate, for better conversion data quality.</p><a href="#contact">Improve measurement</a></div>
+   <div class="card"><div class="ic">▤</div><h3>Calls, forms and reporting</h3><p>Simple reports that show which campaigns and keywords are driving inquiries.</p><a href="#contact">Track your leads</a></div>
+  </div>
+ </div>
+</section>
+ 
+<section class="spot">
+ <div class="wrap">
+  <h2>Explore what each service covers</h2>
+  <p class="lead">Pick a service to see exactly what you get.</p>
+  <div class="tabs" role="tablist">
+   <button class="tab" role="tab" aria-selected="true" data-t="0">Google Ads</button>
+   <button class="tab" role="tab" aria-selected="false" data-t="1">Conversion tracking</button>
+   <button class="tab" role="tab" aria-selected="false" data-t="2">GTM and GA4</button>
+  </div>
+  <div class="panel on" role="tabpanel">
+   <div><h3>Local lead generation with Google Ads</h3><p>I build and manage campaigns that reach people searching for your service in your area, then keep trimming wasted spend so more of your budget goes to real inquiries.</p><a class="btn dark" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Book a consultation</a></div>
+   <ul><li>Campaign structure and keyword research</li><li>Location and service-area targeting</li><li>Search term and negative keyword reviews</li><li>Ad copy and extension improvements</li><li>Landing page feedback for more inquiries</li></ul>
+  </div>
+  <div class="panel" role="tabpanel">
+   <div><h3>Conversion tracking you can trust</h3><p>Before changing budgets or bids, I check that phone calls and form submissions are recorded once and correctly. Good decisions need good data.</p><a class="btn dark" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Book a consultation</a></div>
+   <ul><li>Call and form conversion actions</li><li>Duplicate and missing conversion checks</li><li>Enhanced Conversions where applicable</li><li>Conversion goals aligned with real leads</li><li>Delivery checks inside Google Ads</li></ul>
+  </div>
+  <div class="panel" role="tabpanel">
+   <div><h3>GTM and GA4, set up and tested</h3><p>I configure the agreed events through Google Tag Manager, then test them so you can see what is firing and what reaches your reports.</p><a class="btn dark" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Book a consultation</a></div>
+   <ul><li>Tags, triggers and variables in GTM</li><li>GA4 events and key events</li><li>GTM Preview and GA4 DebugView testing</li><li>Link GA4 with Google Ads</li><li>Handover notes so you know what was built</li></ul>
+  </div>
+ </div>
+</section>
+ 
+<section id="case-studies">
+ <div class="wrap">
+  <h2>Results from real Google Ads campaigns</h2>
+  <p class="lead">Examples of performance after tracking and optimization work. Reporting periods and spend differ, so compare them with care.</p>
+  <div class="cases">
+   <article class="case"><small>Roofing</small><h3>More roofing calls at a lower cost per conversion</h3>
+    <div class="m"><span>Conversions</span><b>49 → 142</b></div>
+    <div class="m"><span>Phone calls</span><b>90 → 265</b></div>
+    <div class="m"><span>Cost per conversion</span><b>$16.32 → $5.32</b></div>
+    <p>Spend moved from $800 to $890. Based on account screenshots.</p></article>
+   <article class="case"><small>Cleaning service</small><h3>More cleaning leads and calls at a lower cost</h3>
+    <div class="m"><span>Conversions</span><b>54 → 167</b></div>
+    <div class="m"><span>Phone calls</span><b>82 → 369</b></div>
+    <div class="m"><span>Cost per conversion</span><b>$15.18 → $5.93</b></div>
+    <p>Apr 16–May 15 vs Aug 1–31, 2026. Spend moved from $820 to $990.</p></article>
+   <article class="case"><small>Dental clinic</small><h3>More dental leads with better cost efficiency</h3>
+    <div class="m"><span>Conversions</span><b>54 → 251</b></div>
+    <div class="m"><span>Phone calls</span><b>82 → 175</b></div>
+    <div class="m"><span>Cost per conversion</span><b>$15.18 → $13.71</b></div>
+    <p>Apr 16–May 15 vs Jul 1–31, 2026. Spend rose from $820 to $3,440, so this is not like-for-like.</p></article>
+  </div>
+ </div>
+</section>
+ 
+<section id="process" class="spot">
+ <div class="wrap">
+  <h2>Find the problem before changing the campaign</h2>
+  <p class="lead">I avoid changing everything at once. Each step is based on evidence.</p>
+  <div class="steps">
+   <div class="step"><h3>Audit</h3><p>Review campaign settings, search terms, conversion actions and current tracking.</p></div>
+   <div class="step"><h3>Find the issue</h3><p>Spot wasted spend, weak intent, tracking gaps or landing page friction.</p></div>
+   <div class="step"><h3>Fix and optimize</h3><p>Prioritize changes by impact on your lead goals, and make them one at a time.</p></div>
+   <div class="step"><h3>Test and report</h3><p>Validate tracking, measure results and explain what to improve next.</p></div>
+  </div>
+ </div>
+</section>
+ 
+<section id="faq">
+ <div class="wrap">
+  <h2>Everything you need to know</h2>
+  <p class="lead">Not sure what your account needs? Start with a short call about your goals.</p>
+  <div class="faq">
+   <details><summary>Which businesses do you work with?</summary><p>Mainly local service businesses such as roofing, plumbing, HVAC and cleaning companies that want more relevant calls and form leads. I also support dental and other service campaigns when it's a good fit.</p></details>
+   <details><summary>Can you audit my existing Google Ads account?</summary><p>Yes. I review campaign structure, keywords, search terms, targeting, ads, conversion actions and the landing page, then list the highest-priority issues.</p></details>
+   <details><summary>Can you set up GTM, GA4 and Google Ads conversion tracking?</summary><p>Yes. The exact setup depends on your website and lead journey. I configure the agreed events and test them with preview and debugging tools.</p></details>
+   <details><summary>Do you guarantee a number of leads?</summary><p>No. Results depend on competition, budget, service area and your website. I focus on sound setup, measurable improvements and transparent reporting.</p></details>
+   <details><summary>What do you need to get started?</summary><p>A short description of your business, service areas and goals. If an audit needs account access, we agree on the minimum access required.</p></details>
+   <details><summary>How much does it cost?</summary><p>Work is scoped and quoted before it starts. Ad spend is paid directly to Google and is separate from my fee.</p></details>
+  </div>
+ </div>
+</section>
+ 
+<section class="final" id="contact">
+ <div class="wrap">
+  <h2>Find out what is holding your leads back</h2>
+  <p>Tell me about your business and your Google Ads goals. We'll start with a free audit call and decide the next step together.</p>
+  <div class="cta">
+   <a class="btn" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener">Book a free audit</a>
+   <a class="btn ghost" href="https://wa.me/8801648314077" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  </div>
+ </div>
+</section>
+</main>
+ 
+<footer>
+ <div class="wrap">
+  <div><b style="color:#fff">PPC Muheuddin</b><br>Google Ads lead generation and tracking for local service businesses.</div>
+  <div>
+   <a href="mailto:muheuddin4077@gmail.com">Email</a>
+   <a href="https://www.linkedin.com/in/ppcmuheuddin" target="_blank" rel="noopener">LinkedIn</a>
+   <a href="https://www.upwork.com/freelancers/~0148181084e34f623f" target="_blank" rel="noopener">Upwork</a>
+   <a href="https://wa.me/8801648314077" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <small>© 2026 PPC Muheuddin. Figures come from account screenshots; reporting periods and spend differ, so results are not necessarily like-for-like. No specific lead volume or result is guaranteed.</small>
+ </div>
+</footer>
+ 
+<script>
+const m=document.getElementById('menu'),n=document.getElementById('nav');
+m.onclick=()=>{const o=n.classList.toggle('open');m.setAttribute('aria-expanded',o)};
+n.querySelectorAll('a').forEach(a=>a.onclick=()=>{n.classList.remove('open');m.setAttribute('aria-expanded',false)});
+const tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+tabs.forEach(t=>t.onclick=()=>{
+ tabs.forEach(x=>x.setAttribute('aria-selected',x===t));
+ panels.forEach((p,i)=>p.classList.toggle('on',i==t.dataset.t));
+});
+</script>
 </body>
 </html>
+ 
