@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +17,11 @@
 --lime:#2be08a;
 --paper:#f5f7f2;
 --line:#dfe6dc;
---muted:#55665d
+--muted:#55665d;
 }
 
 *{box-sizing:border-box;margin:0}
+
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 
 body{
@@ -27,25 +29,27 @@ font-family:Figtree,system-ui,sans-serif;
 background:var(--paper);
 color:var(--ink);
 line-height:1.6;
-font-size:17px
+font-size:17px;
 }
 
 h1,h2,h3{
 font-family:'Bricolage Grotesque',Figtree,sans-serif;
 line-height:1.12;
-letter-spacing:-.02em
+letter-spacing:-.02em;
 }
 
 a{color:inherit}
+
 img{max-width:100%;height:auto;display:block}
 
 .w{max-width:1120px;margin:0 auto;padding:0 22px}
+
 section{padding:76px 0}
 
 h2{
 font-size:clamp(1.8rem,4vw,2.6rem);
 max-width:22ch;
-margin-bottom:12px
+margin-bottom:12px;
 }
 
 .btn{
@@ -56,25 +60,25 @@ font-weight:600;
 text-decoration:none;
 background:var(--lime);
 color:var(--green);
-border:2px solid var(--lime)
+border:2px solid var(--lime);
 }
 
 .btn.d{
 background:var(--green);
 color:#fff;
-border-color:var(--green)
+border-color:var(--green);
 }
 
 .btn.g{
 background:none;
 color:#fff;
-border-color:#fff6
+border-color:#fff6;
 }
 
 .btn.wa{
 background:#25d366;
 border-color:#25d366;
-color:#06361b
+color:#06361b;
 }
 
 header{
@@ -83,7 +87,7 @@ top:0;
 z-index:9;
 background:#f5f7f2ee;
 backdrop-filter:blur(8px);
-border-bottom:1px solid var(--line)
+border-bottom:1px solid var(--line);
 }
 
 .nav{
@@ -91,7 +95,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 height:68px;
-gap:14px
+gap:14px;
 }
 
 .logo{
@@ -102,7 +106,7 @@ text-decoration:none;
 font-family:'Bricolage Grotesque';
 font-weight:800;
 font-size:1.4rem;
-color:#0c8a55
+color:#0c8a55;
 }
 
 .logo img{
@@ -111,25 +115,26 @@ height:44px;
 border-radius:50%;
 object-fit:cover;
 object-position:top;
-border:3px solid #12a566
+border:3px solid #12a566;
 }
 
 nav ul{
 display:flex;
 gap:22px;
 list-style:none;
-padding:0
+padding:0;
 }
 
 nav a{
 text-decoration:none;
 font-weight:500;
-font-size:.95rem
+font-size:.95rem;
 }
 
 nav a.on,nav a:hover{color:#12a566}
 
 .hb{display:flex;gap:8px}
+
 .hb .btn{padding:8px 16px;font-size:.9rem}
 
 .mn{
@@ -138,79 +143,50 @@ background:none;
 border:1px solid var(--line);
 border-radius:10px;
 padding:7px 12px;
-font:inherit
-}
-
-.hero{
-background:var(--green);
-color:#fff;
-padding:70px 0
-}
-
-.hero h1{
-font-size:clamp(2.2rem,5vw,3.8rem);
-font-weight:800;
-margin-bottom:18px
-}
-
-.hero p{
-color:#cfe3d9;
-max-width:54ch;
-margin-bottom:26px
-}
-
-.cta{
-display:flex;
-gap:12px;
-flex-wrap:wrap
-}
-
-.alt{
-background:#fff;
-border-block:1px solid var(--line)
+font:inherit;
 }
 
 .ph{
 background:var(--green);
 color:#fff;
-padding:60px 0
+padding:60px 0;
 }
 
 .ph h1{
 font-size:clamp(2rem,4.5vw,3.2rem);
 max-width:24ch;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .ph p{
 color:#cfe3d9;
-max-width:60ch
+max-width:60ch;
 }
 
 .kp{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:14px;
-margin:22px 0 30px
+margin:22px 0 30px;
 }
 
 .kp div{
 background:#fff;
 border:1px solid var(--line);
 border-radius:16px;
-padding:18px
+padding:18px;
 }
 
 .kp b{
 display:block;
 font-family:'Bricolage Grotesque';
 font-size:1.9rem;
-color:#0c8a55
+color:#0c8a55;
 }
 
 .kp span{
 font-size:.88rem;
-color:var(--muted)
+color:var(--muted);
 }
 
 .shot{
@@ -219,53 +195,83 @@ border-radius:16px;
 background:#fff;
 padding:8px;
 margin:20px 0;
-overflow:hidden
+overflow:hidden;
 }
 
 .shot img{
+display:block;
 width:100%;
 height:auto;
 border-radius:10px;
-object-fit:contain
+object-fit:contain;
 }
 
 .art{max-width:800px}
 
 .art h2{
 font-size:1.7rem;
-margin:34px 0 10px
+margin:34px 0 10px;
 }
 
 .art li{
 margin:6px 0 6px 20px;
-color:var(--muted)
+color:var(--muted);
 }
 
 .art p{
 color:var(--muted);
-margin-bottom:12px
+margin-bottom:12px;
 }
 
 .note{font-size:.85rem}
+
+.alt{
+background:#fff;
+border-block:1px solid var(--line);
+}
+
+.hero{
+background:var(--green);
+color:#fff;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:clamp(2.2rem,5vw,3.8rem);
+font-weight:800;
+margin-bottom:18px;
+}
+
+.hero p{
+color:#cfe3d9;
+max-width:54ch;
+margin-bottom:26px;
+}
+
+.cta{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
 
 footer{
 background:#0a2a1f;
 color:#a9c4b7;
 padding:40px 0;
-font-size:.92rem
+font-size:.92rem;
 }
 
 footer .w{
 display:flex;
 justify-content:space-between;
 gap:20px;
-flex-wrap:wrap
+flex-wrap:wrap;
 }
 
 footer a{
 color:#fff;
 font-weight:600;
-margin-right:18px
+margin-right:18px;
 }
 
 footer small{
@@ -273,7 +279,7 @@ width:100%;
 border-top:1px solid #fff2;
 padding-top:16px;
 color:#7fa391;
-font-size:.8rem
+font-size:.8rem;
 }
 
 @media(max-width:900px){
@@ -290,7 +296,7 @@ left:0;
 right:0;
 background:var(--paper);
 border-bottom:1px solid var(--line);
-display:none
+display:none;
 }
 
 nav.open{display:block}
@@ -298,12 +304,12 @@ nav.open{display:block}
 nav ul{
 flex-direction:column;
 gap:0;
-padding:6px 22px
+padding:6px 22px;
 }
 
 nav li a{
 display:block;
-padding:11px 0
+padding:11px 0;
 }
 
 .hb .d{display:none}
@@ -311,7 +317,9 @@ padding:11px 0
 section{padding:56px 0}
 
 .kp{gap:10px}
+
 .kp div{padding:14px}
+
 .kp b{font-size:1.55rem}
 }
 </style>
@@ -323,7 +331,7 @@ section{padding:56px 0}
 <div class="w nav">
 
 <a class="logo" href="index.html">
-<img src="./muheuddin.jpg" alt="Muheuddin profile photo" width="44" height="44">
+<img src="https://ppcmuheuddin.github.io/muheuddin.jpg" alt="Muheuddin profile photo">
 MUHEUDDIN
 </a>
 
@@ -373,9 +381,8 @@ MUHEUDDIN
 </div>
 
 <div class="art">
-
 <div class="shot">
-<img src="./case-dental.webp" alt="Google Ads overview for a Dental Healthcare account" loading="lazy">
+<img src="https://ppcmuheuddin.github.io/case-dental.webp" alt="Google Ads overview for a Dental Healthcare account" loading="eager">
 </div>
 
 <p class="note">Google Ads overview, Jun 2 – Jul 1, 2026. Figures are exactly as shown in the account.</p>
@@ -394,7 +401,6 @@ MUHEUDDIN
 <p>A dental healthcare business needed patient inquiries from local searches. Campaigns focused on calls and booking intent produced 14 conversions and 23 phone calls from $1.26K in 30 days.</p>
 
 <a class="btn d" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener noreferrer">Book a free audit ↗</a>
-
 </div>
 </div>
 </section>
@@ -415,9 +421,8 @@ MUHEUDDIN
 </div>
 
 <div class="art">
-
 <div class="shot">
-<img src="./case-cleaning.webp" alt="Google Ads overview for a Cleaning account" loading="lazy">
+<img src="https://ppcmuheuddin.github.io/case-cleaning.webp" alt="Google Ads overview for a Cleaning account" loading="eager">
 </div>
 
 <p class="note">Google Ads overview, Jan 1 – 7, 2025. Figures are exactly as shown in the account.</p>
@@ -436,7 +441,6 @@ MUHEUDDIN
 <p>A local cleaning service ran Google Ads for quote requests and calls. In the 7-day window shown, $346 produced 115 clicks and 10 conversions at $34.57 each.</p>
 
 <a class="btn d" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener noreferrer">Book a free audit ↗</a>
-
 </div>
 </div>
 </section>
@@ -457,9 +461,8 @@ MUHEUDDIN
 </div>
 
 <div class="art">
-
 <div class="shot">
-<img src="./case-dumpster.webp" alt="Google Ads overview for a Dumpster Rental account" loading="lazy">
+<img src="https://ppcmuheuddin.github.io/case-dumpster.webp" alt="Google Ads overview for a Dumpster Rental account" loading="eager">
 </div>
 
 <p class="note">Google Ads overview, Dec 9, 2024 – Jan 7, 2025. Figures are exactly as shown in the account.</p>
@@ -478,7 +481,6 @@ MUHEUDDIN
 <p>A dumpster rental and waste removal business needed more booking calls and requests. Over 30 days, $998 produced 350 clicks and 26 conversions at $38.39 each.</p>
 
 <a class="btn d" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener noreferrer">Book a free audit ↗</a>
-
 </div>
 </div>
 </section>
@@ -499,9 +501,8 @@ MUHEUDDIN
 </div>
 
 <div class="art">
-
 <div class="shot">
-<img src="./case-roofing.webp" alt="Google Ads overview for a Roofing account" loading="lazy">
+<img src="https://ppcmuheuddin.github.io/case-roofing.webp" alt="Google Ads overview for a Roofing account" loading="eager">
 </div>
 
 <p class="note">Google Ads overview, Sep 9 – 12, 2025. Figures are exactly as shown in the account.</p>
@@ -520,7 +521,6 @@ MUHEUDDIN
 <p>A roofing account scaled spend over a short custom window: $8.83K produced 11K clicks and 5.86K conversions at $1.51 each, as counted by the account's conversion actions.</p>
 
 <a class="btn d" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener noreferrer">Book a free audit ↗</a>
-
 </div>
 </div>
 </section>
@@ -541,9 +541,8 @@ MUHEUDDIN
 </div>
 
 <div class="art">
-
 <div class="shot">
-<img src="./case-waterproofing.webp" alt="Google Ads overview for a Waterproofing account" loading="lazy">
+<img src="https://ppcmuheuddin.github.io/case-waterproofing.webp" alt="Google Ads overview for a Waterproofing account" loading="eager">
 </div>
 
 <p class="note">Google Ads overview, Jul 29 – Aug 27, 2026. Figures are exactly as shown in the account.</p>
@@ -562,7 +561,6 @@ MUHEUDDIN
 <p>A waterproofing business wanted more phone enquiries. In 30 days, $697 produced 54.5 phone call leads at $12.78 each, at an average CPC of $1.23.</p>
 
 <a class="btn d" href="https://calendly.com/muheuddin4077/30min" target="_blank" rel="noopener noreferrer">Book a free audit ↗</a>
-
 </div>
 </div>
 </section>
