@@ -91,9 +91,9 @@ if(f)f.onsubmit=async e=>{
     const j=await r.json();
     if(!j.success)throw new Error();
     f.reset();
-    btn.textContent='Thank you!😊 Your message has been successfully sent. Muheuddin will reply to you by email very soon.';
+    btn.textContent='Send message →';
   }catch(err){
-    btn.textContent=old;
+    btn.textContent=Thank you!😊 Your message has been successfully sent. Muheuddin will reply to you by email very soon.;
     alert('Could not send. Please email muheuddin4077@gmail.com');
   }
   btn.disabled=false;
